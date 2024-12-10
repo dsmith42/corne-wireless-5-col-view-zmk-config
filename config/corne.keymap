@@ -15,15 +15,16 @@
 #define AS(keycode) &as LS(keycode) keycode
 
 / {
-    chosen {
-        zmk,physical-layout = &foostan_corne_5col_layout;
-    };
+        chosen {
+                zmk,physical-layout = &foostan_corne_5col_layout;
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
                         bindings = <
-                        /**
+/**
  *      ,-----------------------------------------------------.         .------------------------------------------------------.
  *      |   Q     |    W     |    F     |    P     |    G     |         |    J     |    L     |    U     |    Y     |    ;     |
  *      |  CTRL   |   ALT    |   CMD    |          |          |         |          |          |   CMD    |   ALT    |   CTRL   |
@@ -71,9 +72,7 @@
                         >;
                 };
 
-        };
-
-        num_layer {
+                num_layer {
                         bindings = <
 /**
  *      ,-----------------------------------------------------.         .------------------------------------------------------.
