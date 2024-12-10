@@ -31,7 +31,7 @@
 
                 default_layer {
                         display-name = "Base";
-                        bindings = <al
+                        bindings = <
 
 /**
  *      DEFAULT LAYER
