@@ -11,6 +11,7 @@
 #include "combos.dtsi"
 #include "definitions.dtsi"
 #include "tapdances.dtsi"
+#include "homerow.dtsi"
 
 / {
         chosen {
