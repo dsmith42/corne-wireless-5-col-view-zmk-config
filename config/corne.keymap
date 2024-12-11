@@ -100,5 +100,32 @@
                               &trans     &trans     &trans              &trans     &kp N0     &trans
                         >;
                 };
+        
+                nav_layer {
+
+                        display-name = "Nav";
+                        bindings = <
+/**
+ *      ,-----------------------------------------------------.         .------------------------------------------------------.
+ *      |         |          |          |          |  Xcode   |         |  Zoom    |   Home   |    Up    |   End    | Page Up  |
+ *      |         |          |          |          |  Line Up |         |  Mic     |          |          |          |          |
+ *      -------------------------------------------------------         --------------------------------------------------------
+ *      |         |          |          |          |  Xcode   |         |  Zoom    |   Left   |   Down   |  Right   | Page Dn  |
+ *      |         |          |          |          |  Line Dn |         |  Video   |          |          |          |          |
+ *      -------------------------------------------------------         --------------------------------------------------------
+ *      |         |          |  Screen  |          |          |         |  Prev    |   Prev   |   Next   |  Next    |   Next   |
+ *      |         |          | Capture  |          |          |         | History  |   Tab    | Window   |  Tab     |  History |
+ *      -------------------------------------------------------         --------------------------------------------------------
+ *                                      |   BSP    |   TAB    |         |    -     |  Space   |
+ *                                      |   SYM    |   SFT    |         |   Arr    |   NAV    |
+ *                                      `---------------------'         `---------------------'
+ **/
+
+        &none      &none      &none      &none      LINE_UP             ZOOM_MIC   &kp HOME   &kp UP     &kp END    &kp PAGE_UP
+        &none      &none      &none      &none      LINE_DN             ZOOM_VID   &kp LEFT   &kp DOWN   &kp RIGHT  &kp PAGE_DOWN
+        &none      &none      SCR_CAP    &none      &none               P_HIST     P_TAB      N_WIND     N_TAB      N_HIST
+                              &trans     &kp DEL    &trans              &trans     SPC_NAV     &trans
+                        >;
+                };
         };
 };
