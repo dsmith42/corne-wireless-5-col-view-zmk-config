@@ -41,14 +41,13 @@
  *                                      |   SYM    |   SFT    |         |   Arr    |   NAV    |
  *                                      `---------------------'         `---------------------'
  **/
-
+        
         &kp Q      &kp W      &kp F      &kp P      &kp G               &kp J      &kp L      &kp U      &kp Y      &kp SEMI
         &kp A      &kp R      &kp S      &kp T      &kp D               &kp H      &kp N      &kp E      &kp I      &kp O
         &kp Z      &kp X      &kp C      &kp V      &kp B               &kp K      &kp M      &kp COMMA  &kp DOT    &kp SQT
                               &none      BSP_SYM    TAB_SFT             &kp MINUS  &kp SPACE  &none
                         >;
                 };
-        };
 
                 sym_layer {
                         display-name = "Symbol";
@@ -75,4 +74,5 @@
                               &trans     &trans     &trans              &trans     &trans     &trans
                         >;
                 };
+        };
 };
