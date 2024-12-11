@@ -44,7 +44,7 @@
         
         CTL_Q      ALT_W      CMD_F      &kp P      &kp G               &kp J      &kp L      CMD_U      ALT_Y      CTL_SEMI
         &kp A      &kp R      &kp S      SFT_T      &kp D               &kp H      SFT_N      &kp E      &kp I      &kp O
-        &kp Z      &kp X      &kp C      &kp V      &kp B               &kp K      &kp M      &kp COMMA  &kp DOT    &kp SQT
+        NUM_Z      &kp X      &kp C      &kp V      &kp B               &kp K      &kp M      &kp COMMA  &kp DOT    &kp SQT
                               &none      BSP_SYM    TAB_SFT             &kp MINUS  &kp SPACE  &none
                         >;
                 };
@@ -74,5 +74,30 @@
                               &trans     &trans     &trans              &trans     &trans     &trans
                         >;
                 };
+
+                num_layer {
+                        display-name = "Number";
+                        bindings = <
+/**
+ *      ,-----------------------------------------------------.         .------------------------------------------------------.
+ *      |         |          |          |          |          |         |    :     |    7     |    8     |    9     |    0     |
+ *      |         |          |          |          |          |         |          |          |          |          |          |
+ *      -------------------------------------------------------         --------------------------------------------------------
+ *      |         |   CUT    |   COPY   |  PASTE   |          |         |    .     |    4     |    5     |    6     |    /     |
+ *      |         |          |          |          |          |         |          |          |          |          |          |
+ *      -------------------------------------------------------         --------------------------------------------------------
+ *      |  NUM    |          |          |          |          |         |    +     |    1     |    2     |    3     |    *     |
+ *      |         |          |          |          |          |         |          |          |          |          |          |
+ *      -------------------------------------------------------         --------------------------------------------------------
+ *                                      |   BSP    |   TAB    |         |    -     |    0     |
+ *                                      |   SYM    |   SFT    |         |   Arr    |          |
+ *                                      `---------------------'         `---------------------'
+ **/
+ 
+        &none      &none      &none      &none      &none               &kp COLON  &kp N7     &kp N8     &kp N9     &kp N0 
+        &none      N_CUT      N_COPY     N_PASTE    &none               &kp DOT    &kp N4     &kp N5     &kp N6     &kp FSLH 
+        &none      &none      &none      &none      &none               &kp PLUS   &kp N1     &kp N2     &kp N3     &kp ASTRK
+                              &trans     &trans     &trans              &trans     &kp N0     &trans
+                        >;
         };
 };
