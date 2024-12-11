@@ -21,7 +21,7 @@
 #define TAB_SFT &mt LSHFT TAB
 // #define MIN_ARR &th_ht ARR MINUS
 // #define SPC_NAV &th_ht NAV SPACE
-// #define NUM_Z &th_ht NUM Z
+#define NUM_Z &th_ht NUM Z
 
 // Nav shortcuts
 #define P_HIST &kp LG(LBKT)
