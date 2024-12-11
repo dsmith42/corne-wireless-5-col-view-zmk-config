@@ -45,7 +45,7 @@
         CTL_Q      ALT_W      CMD_F      &kp P      &kp G               &kp J      &kp L      CMD_U      ALT_Y      CTL_SEMI
         &kp A      &kp R      &kp S      SFT_T      &kp D               &kp H      SFT_N      &kp E      &kp I      &kp O
         NUM_Z      &kp X      &kp C      &kp V      &kp B               &kp K      &kp M      &kp COMMA  &kp DOT    &kp SQT
-                              &none      BSP_SYM    TAB_SFT             &kp MINUS  &kp SPACE  &none
+                              &none      BSP_SYM    TAB_SFT             MIN_ARR    SPC_NAV  &none
                         >;
                 };
 
@@ -125,6 +125,58 @@
         &none      &none      &none      &none      LINE_DN             ZOOM_VID   &kp LEFT   &kp DOWN   &kp RIGHT  &kp PAGE_DOWN
         &none      &none      SCR_CAP    &none      &none               P_HIST     P_TAB      N_WIND     N_TAB      N_HIST
                               &trans     &kp DEL    &trans              &trans     SPC_NAV     &trans
+                        >;
+                };
+
+                arr_layer {
+                        display-name = "Arrange";
+                        bindings = <
+/**
+ *      ,-----------------------------------------------------.         .------------------------------------------------------.
+ *      |  1/6th  |  2/6th   |  Full    |  5/6th   |  6/6th   |         |          |   Top    |   Top    |   Top    |          |
+ *      |         |          |  Screen  |          |          |         |          |   Left   |   Half   |  Right   |          |
+ *      -------------------------------------------------------         --------------------------------------------------------
+ *      | L 1/3rd | L 2/3rds | C 1/3rd  | R 2/3rds | R 1/3rd  |         |  Prev    |   Left   |   Down   |  Right   |  Next    |
+ *      |         |          |          |          |          |         | Screen   |   Half   |          |  Half    |  Screen  |
+ *      -------------------------------------------------------         --------------------------------------------------------
+ *      | L 5/6th |  3/6th   |  Centre  |  4/6th   | R 5/6th  |         |          |  Bottom  |  Bottom  |  Bottom  |          |
+ *      |         |          |          |          |          |         |          |  Left    |  Half    |  Right   |          |
+ *      -------------------------------------------------------         --------------------------------------------------------
+ *                                      |   BSP    |   TAB    |         |    -     |  Space   |
+ *                                      |   SYM    |   SFT    |         |   Arr    |   NAV    |
+ *                                      `---------------------'         `---------------------'
+ **/
+
+        ARR_1_6    ARR_2_6    A_FULLSCR  ARR_5_6    ARR_6_6             &none      TOP_LEFT   TOP_1_2    TOP_RIGHT  &none
+        LEFT_1_3   LEFT_2_3   MID_1_3    RIGHT_2_3  RIGHT_1_3           P_SCREEN   LEFT_1_2   BOT_1_2    RIGHT_1_2  N_SCREEN
+        LEFT_5_6   ARR_3_6    A_CENTRE   ARR_4_6    RIGHT_5_6           &none      BOT_LEFT   A_RESTORE  BOT_RIGHT  &none
+                              &trans     &trans     &trans              &trans     &trans     &trans
+                        >;
+                };
+
+                thu_layer {
+                        display-name = "Shortcuts";
+                        bindings = <
+/**
+ *      ,-----------------------------------------------------.         .------------------------------------------------------.
+ *      |  BT 0   |  BT 1    |   BT 2   |   BT 3   | BT Clear |         |          |  Input   |          |          |  Text +  |
+ *      |         |          |          |          |          |         |          | Language |          |          |          |
+ *      -------------------------------------------------------         --------------------------------------------------------
+ *      |         |          |          |          |          |         |          |          |  EMOJI   |          |  Text -  |
+ *      |         |          |          |          |          |         |          |          |          |          |          |
+ *      -------------------------------------------------------         --------------------------------------------------------
+ *      |         |          |          |          |          |         |          |          |          |          |          |
+ *      |         |          |          |          |          |         |          |          |          |          |          |
+ *      -------------------------------------------------------         --------------------------------------------------------
+ *                                      |   BSP    |   TAB    |         |    -     |  Space   |
+ *                                      |   SYM    |   SFT    |         |   Arr    |   NAV    |
+ *                                      `---------------------'         `---------------------'
+ **/
+
+        BT0        BT1        BT2        BT3        BT_CLEAR            &trans     INPUT_LANG &trans     &trans     TXT_PLUS
+        &trans     &trans     &trans     &trans     &trans              &trans     &trans     EMOJI      &trans     TXT_MINUS
+        &trans     &trans     &trans     &trans     &trans              &trans     &trans     &trans     &trans     &trans
+                              &trans     &trans     &trans              &trans     &trans     &trans
                         >;
                 };
         };

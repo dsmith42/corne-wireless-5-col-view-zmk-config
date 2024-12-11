@@ -3,7 +3,7 @@
 #define SYM 1
 #define NUM 2
 #define NAV 3
-// #define ARR 4
+#define ARR 4
 // #define THU 5
 
 // Home modifiers
@@ -19,7 +19,7 @@
 // Layer tap hold shortcuts
 #define BSP_SYM &th_ht SYM BSPC
 #define TAB_SFT &mt LSHFT TAB
-// #define MIN_ARR &th_ht ARR MINUS 
+#define MIN_ARR &th_ht ARR MINUS 
 #define SPC_NAV &th_ht NAV SPACE
 #define NUM_Z &th_ht NUM Z
 
