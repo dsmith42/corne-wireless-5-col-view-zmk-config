@@ -99,5 +99,6 @@
         &none      &none      &none      &none      &none               &kp PLUS   &kp N1     &kp N2     &kp N3     &kp ASTRK
                               &trans     &trans     &trans              &trans     &kp N0     &trans
                         >;
+                };
         };
 };
