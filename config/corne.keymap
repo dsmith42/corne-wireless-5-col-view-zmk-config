@@ -107,13 +107,13 @@
                         bindings = <
 /**
  *      ,-----------------------------------------------------.         .------------------------------------------------------.
- *      |         |          |          |          |  Xcode   |         |  Zoom    |   Home   |    Up    |   End    | Page Up  |
+ *      |  Vol +  |          |          |          |  Xcode   |         |  Zoom    |   Home   |    Up    |   End    | Page Up  |
  *      |         |          |          |          |  Line Up |         |  Mic     |          |          |          |          |
  *      -------------------------------------------------------         --------------------------------------------------------
- *      |         |          |          |          |  Xcode   |         |  Zoom    |   Left   |   Down   |  Right   | Page Dn  |
+ *      |  Vol -  |          |          |          |  Xcode   |         |  Zoom    |   Left   |   Down   |  Right   | Page Dn  |
  *      |         |          |          |          |  Line Dn |         |  Video   |          |          |          |          |
  *      -------------------------------------------------------         --------------------------------------------------------
- *      |         |          |  Screen  |          |          |         |  Prev    |   Prev   |   Next   |  Next    |   Next   |
+ *      |  Mute   |          |  Screen  |          |          |         |  Prev    |   Prev   |   Next   |  Next    |   Next   |
  *      |         |          | Capture  |          |          |         | History  |   Tab    | Window   |  Tab     |  History |
  *      -------------------------------------------------------         --------------------------------------------------------
  *                                      |   BSP    |   TAB    |         |    -     |  Space   |
@@ -121,9 +121,9 @@
  *                                      `---------------------'         `---------------------'
  **/
         
-        &none      &none      &none      &none      LINE_UP             ZOOM_MIC   &kp HOME   &kp UP     &kp END    &kp PAGE_UP
-        &none      &none      &none      &none      LINE_DN             ZOOM_VID   &kp LEFT   &kp DOWN   &kp RIGHT  &kp PAGE_DOWN
-        &none      &none      SCR_CAP    &none      &none               P_HIST     P_TAB      N_WIND     N_TAB      N_HIST
+        C_VOL_UP   &none      &none      &none      LINE_UP             ZOOM_MIC   &kp HOME   &kp UP     &kp END    &kp PAGE_UP
+        C_VOL_DN   &none      &none      &none      LINE_DN             ZOOM_VID   &kp LEFT   &kp DOWN   &kp RIGHT  &kp PAGE_DOWN
+        C_MUTE     &none      SCR_CAP    &none      &none               P_HIST     P_TAB      N_WIND     N_TAB      N_HIST
                               &trans     &kp DEL    &trans              &trans     SPC_NAV     &trans
                         >;
                 };
