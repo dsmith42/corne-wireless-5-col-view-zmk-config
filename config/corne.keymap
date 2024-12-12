@@ -80,8 +80,8 @@
                         bindings = <
 /**
  *      ,-----------------------------------------------------.         .------------------------------------------------------.
- *      |         |          |          |          |          |         |    :     |    7     |    8     |    9     |    0     |
- *      |         |          |          |          |          |         |          |          |          |          |          |
+ *      |  BT 0   |   BT 1   |   BT 2   |   BT     |          |         |    :     |    7     |    8     |    9     |    0     |
+ *      |         |          |          |  Clear   |          |         |          |          |          |          |          |
  *      -------------------------------------------------------         --------------------------------------------------------
  *      |         |   CUT    |   COPY   |  PASTE   |          |         |    .     |    4     |    5     |    6     |    /     |
  *      |         |          |          |          |          |         |          |          |          |          |          |
@@ -94,7 +94,7 @@
  *                                      `---------------------'         `---------------------'
  **/
  
-        &none      &none      &none      &none      &none               &kp COLON  &kp N7     &kp N8     &kp N9     &kp N0 
+        BT0        BT1        BT2        BT_CLEAR   &none               &kp COLON  &kp N7     &kp N8     &kp N9     &kp N0 
         &none      N_CUT      N_COPY     N_PASTE    &none               &kp DOT    &kp N4     &kp N5     &kp N6     &kp FSLH 
         &trans     &none      &none      &none      &none               &kp PLUS   &kp N1     &kp N2     &kp N3     &kp ASTRK
                               &trans     &trans     &trans              &trans     &kp N0     &trans
@@ -107,23 +107,23 @@
                         bindings = <
 /**
  *      ,-----------------------------------------------------.         .------------------------------------------------------.
- *      |         |          |          |          |  Xcode   |         |  Zoom    |   Home   |    Up    |   End    | Page Up  |
+ *      |  Vol +  |          |          |          |  Xcode   |         |  Zoom    |   Home   |    Up    |   End    | Page Up  |
  *      |         |          |          |          |  Line Up |         |  Mic     |          |          |          |          |
  *      -------------------------------------------------------         --------------------------------------------------------
- *      |         |          |          |          |  Xcode   |         |  Zoom    |   Left   |   Down   |  Right   | Page Dn  |
+ *      |  Vol -  |          |          |          |  Xcode   |         |  Zoom    |   Left   |   Down   |  Right   | Page Dn  |
  *      |         |          |          |          |  Line Dn |         |  Video   |          |          |          |          |
  *      -------------------------------------------------------         --------------------------------------------------------
- *      |         |          |  Screen  |          |          |         |  Prev    |   Prev   |   Next   |  Next    |   Next   |
+ *      |  Mute   |          |  Screen  |          |          |         |  Prev    |   Prev   |   Next   |  Next    |   Next   |
  *      |         |          | Capture  |          |          |         | History  |   Tab    | Window   |  Tab     |  History |
  *      -------------------------------------------------------         --------------------------------------------------------
  *                                      |   BSP    |   TAB    |         |    -     |  Space   |
  *                                      |   SYM    |   SFT    |         |   Arr    |   NAV    |
  *                                      `---------------------'         `---------------------'
  **/
-
-        &none      &none      &none      &none      LINE_UP             ZOOM_MIC   &kp HOME   &kp UP     &kp END    &kp PAGE_UP
-        &none      &none      &none      &none      LINE_DN             ZOOM_VID   &kp LEFT   &kp DOWN   &kp RIGHT  &kp PAGE_DOWN
-        &none      &none      SCR_CAP    &none      &none               P_HIST     P_TAB      N_WIND     N_TAB      N_HIST
+        
+        C_VOL_UP   &none      &none      &none      LINE_UP             ZOOM_MIC   &kp HOME   &kp UP     &kp END    &kp PAGE_UP
+        C_VOL_DN   &none      &none      &none      LINE_DN             ZOOM_VID   &kp LEFT   &kp DOWN   &kp RIGHT  &kp PAGE_DOWN
+        C_MUTE     &none      SCR_CAP    &none      &none               P_HIST     P_TAB      N_WIND     N_TAB      N_HIST
                               &trans     &kp DEL    &trans              &trans     SPC_NAV     &trans
                         >;
                 };
@@ -150,32 +150,6 @@
         ARR_1_6    ARR_2_6    A_FULLSCR  ARR_5_6    ARR_6_6             &none      TOP_LEFT   TOP_1_2    TOP_RIGHT  &none
         LEFT_1_3   LEFT_2_3   MID_1_3    RIGHT_2_3  RIGHT_1_3           P_SCREEN   LEFT_1_2   BOT_1_2    RIGHT_1_2  N_SCREEN
         LEFT_5_6   ARR_3_6    A_CENTRE   ARR_4_6    RIGHT_5_6           &none      BOT_LEFT   A_RESTORE  BOT_RIGHT  &none
-                              &trans     &trans     &trans              &trans     &trans     &trans
-                        >;
-                };
-
-                thu_layer {
-                        display-name = "Shortcuts";
-                        bindings = <
-/**
- *      ,-----------------------------------------------------.         .------------------------------------------------------.
- *      |  BT 0   |  BT 1    |   BT 2   |   BT 3   | BT Clear |         |          |  Input   |          |          |  Text +  |
- *      |         |          |          |          |          |         |          | Language |          |          |          |
- *      -------------------------------------------------------         --------------------------------------------------------
- *      |         |          |          |          |          |         |          |          |  EMOJI   |          |  Text -  |
- *      |         |          |          |          |          |         |          |          |          |          |          |
- *      -------------------------------------------------------         --------------------------------------------------------
- *      |         |          |          |          |          |         |          |          |          |          |          |
- *      |         |          |          |          |          |         |          |          |          |          |          |
- *      -------------------------------------------------------         --------------------------------------------------------
- *                                      |   BSP    |   TAB    |         |    -     |  Space   |
- *                                      |   SYM    |   SFT    |         |   Arr    |   NAV    |
- *                                      `---------------------'         `---------------------'
- **/
-
-        BT0        BT1        BT2        BT3        BT_CLEAR            &trans     INPUT_LANG &trans     &trans     TXT_PLUS
-        &trans     &trans     &trans     &trans     &trans              &trans     &trans     EMOJI      &trans     TXT_MINUS
-        &trans     &trans     &trans     &trans     &trans              &trans     &trans     &trans     &trans     &trans
                               &trans     &trans     &trans              &trans     &trans     &trans
                         >;
                 };

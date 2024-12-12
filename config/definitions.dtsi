@@ -4,7 +4,7 @@
 #define NUM 2
 #define NAV 3
 #define ARR 4
-// #define THU 5
+//  #define THU 5
 
 // Home modifiers
 #define CTL_Q &hm_qsemi LCTRL Q
