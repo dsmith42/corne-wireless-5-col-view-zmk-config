@@ -121,9 +121,9 @@
  *                                      `---------------------'         `---------------------'
  **/
         
-        C_VOL_UP   &none      &none      &none      LINE_UP             ZOOM_MIC   &kp HOME   &kp UP     &kp END    &kp PAGE_UP
-        C_VOL_DN   &none      &none      &none      LINE_DN             ZOOM_VID   &kp LEFT   &kp DOWN   &kp RIGHT  &kp PAGE_DOWN
-        C_MUTE     &none      SCR_CAP    &none      &none               P_HIST     P_TAB      N_WIND     N_TAB      N_HIST
+        &kp C_VOL_UP   &none      &none      &none      LINE_UP             ZOOM_MIC   &kp HOME   &kp UP     &kp END    &kp PAGE_UP
+        &kp C_VOL_DN   &none      &none      &none      LINE_DN             ZOOM_VID   &kp LEFT   &kp DOWN   &kp RIGHT  &kp PAGE_DOWN
+        &kp C_MUTE     &none      SCR_CAP    &none      &none               P_HIST     P_TAB      N_WIND     N_TAB      N_HIST
                               &trans     &kp DEL    &trans              &trans     SPC_NAV     &trans
                         >;
                 };
