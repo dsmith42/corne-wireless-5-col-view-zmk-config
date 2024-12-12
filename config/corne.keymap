@@ -80,11 +80,11 @@
                         bindings = <
 /**
  *      ,-----------------------------------------------------.         .------------------------------------------------------.
- *      |  BT 0   |   BT 1   |   BT 2   |   BT     |          |         |    :     |    7     |    8     |    9     |    0     |
- *      |         |          |          |  Clear   |          |         |          |          |          |          |          |
+ *      |  BT 0   |   BT 1   |   BT 2   |   BT 3   |   BT     |         |    :     |    7     |    8     |    9     |    0     |
+ *      |         |          |          |          |  clear   |         |          |          |          |          |          |
  *      -------------------------------------------------------         --------------------------------------------------------
- *      |         |   CUT    |   COPY   |  PASTE   |          |         |    .     |    4     |    5     |    6     |    /     |
- *      |         |          |          |          |          |         |          |          |          |          |          |
+ *      |  BT     |   CUT    |   COPY   |  PASTE   |          |         |    .     |    4     |    5     |    6     |    /     |
+ *      |Clear All|          |          |          |          |         |          |          |          |          |          |
  *      -------------------------------------------------------         --------------------------------------------------------
  *      |  NUM    |          |          |          |          |         |    +     |    1     |    2     |    3     |    *     |
  *      |         |          |          |          |          |         |          |          |          |          |          |
@@ -94,8 +94,8 @@
  *                                      `---------------------'         `---------------------'
  **/
  
-        BT0        BT1        BT2        BT_CLEAR   &none               &kp COLON  &kp N7     &kp N8     &kp N9     &kp N0 
-        &none      N_CUT      N_COPY     N_PASTE    &none               &kp DOT    &kp N4     &kp N5     &kp N6     &kp FSLH 
+        BT0        BT1        BT2        BT3        BT_CLEAR            &kp COLON  &kp N7     &kp N8     &kp N9     &kp N0 
+        BT_CLEARA  N_CUT      N_COPY     N_PASTE    &none               &kp DOT    &kp N4     &kp N5     &kp N6     &kp FSLH 
         &trans     &none      &none      &none      &none               &kp PLUS   &kp N1     &kp N2     &kp N3     &kp ASTRK
                               &trans     &trans     &trans              &trans     &kp N0     &trans
                         >;
